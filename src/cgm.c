@@ -543,7 +543,7 @@ static void draw_date_from_app() {
   
   // format current date from app
   if (strcmp(time_watch_text, "00:00") == 0) {
-    draw_return = strftime(time_watch_text, TIME_TEXTBUFF_SIZE, "%l:%M", current_d_app);
+    draw_return = strftime(time_watch_text, TIME_TEXTBUFF_SIZE, "%H:%M", current_d_app);
 	if (draw_return != 0) {
       text_layer_set_text(time_watch_layer, time_watch_text);
 	}
@@ -1766,7 +1766,7 @@ static void handle_minute_tick(struct tm* tick_time, TimeUnits units_changed) {
   
   if (units_changed & MINUTE_UNIT) {
     //APP_LOG(APP_LOG_LEVEL_INFO, "TICK TIME MINUTE CODE");
-    tick_return = strftime(time_watch_text, TIME_TEXTBUFF_SIZE, "%l:%M", tick_time);
+    tick_return = strftime(time_watch_text, TIME_TEXTBUFF_SIZE, "%H:%M", tick_time);
 	if (tick_return != 0) {
       text_layer_set_text(time_watch_layer, time_watch_text);
 	}
