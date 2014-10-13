@@ -172,7 +172,7 @@ static const bool TurnOff_CHECKPHONE_Msg = false;
 
 // Control All Vibrations
 // IF YOU WANT NO VIBRATIONS, SET TO true
-static const bool TurnOffAllVibrations = false;
+static const bool TurnOffAllVibrations = true;
 
 // Bluetooth Timer Wait Time, in Seconds
 // RANGE 0-240
